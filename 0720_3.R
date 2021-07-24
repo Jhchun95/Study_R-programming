@@ -1,3 +1,7 @@
+# alt + - = 자동적으로 <- 생성됨.
+# 보통 변수 선언과 비슷한 듯 싶다.
+# data.frame에 대해 이해하기
+
 A_salary <- c(25,28,50,60,30,35,40,70,40,70,40,100,30,30) # 연봉 변수
 A_hireyears <- c(1,1,5,6,3,3,4,7,4,7,4,10,3,3)
 A <- data.frame(salary <- A_salary, hireyears <- A_hireyears)
