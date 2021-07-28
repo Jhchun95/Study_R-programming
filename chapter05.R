@@ -12,6 +12,7 @@ summary (Orange)
 
 ### 외부 파일 읽기
 ## CSV 파일 불러오기
+## 경로 면 바로 에러
 nhis <- read.csv("C:/data/NHIS_OPEN_GJ_EUC-KR.csv")
 head(nhis)
 
