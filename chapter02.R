@@ -20,8 +20,10 @@ class(name)
 
 # 논리 데이터 타입
 is_effective <- T
+# True
 is_effective
 is_effective <- F
+# False
 is_effective
 class(is_effective)
 
