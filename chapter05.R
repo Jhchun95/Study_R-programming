@@ -1,18 +1,22 @@
 ### 데이터의 대략적인 특징 파악
 
-head(Orange) # 첫번째 행부터 6번째 행까지 추출
-head(Orange,3) # 첫번째 행부터 3번째 행까지 추출
+# 첫번째 행부터 6번째 행까지 추출
+head(Orange) 
+# 첫번째 행부터 3번째 행까지 추출
+head(Orange,3) 
 
-tail(Orange) # 마지막 행부터 6개의 행까지 추출
-tail(Orange,10) # 마지막 행부터 3개의 행까지 추출
+# 마지막 행부터 6개의 행까지 추출
+tail(Orange) 
+# 마지막 행부터 3개의 행까지 추출
+tail(Orange,10)
 
-str(Orange) #데이터의 구조를 파악
+# 데이터의 구조를 파악하기 위해 선언
+str(Orange) 
 summary (Orange)
 
 
 ### 외부 파일 읽기
-## CSV 파일 불러오기
-## 경로 면 바로 에러
+## CSV 파일 불러오기, 경로를 올바르게 적지 않으면 에러 
 nhis <- read.csv("C:/data/NHIS_OPEN_GJ_EUC-KR.csv")
 head(nhis)
 
@@ -44,14 +48,20 @@ str(nhis_bigdata)
 ### 데이터 추출
 ## 행 인덱스를 이용하여 행 제한
 
-Orange[1,]          # 1행만 추출
-Orange[1:5, ]       # 1행부터 5행까지 추출
-Orange[6,10, ]      # 6행부터 10행까지 추출
-Orange[c(1,5), ]    # 1행과 5행 추출
-Orange[-c(1:29), ]  # 1~29행 제외하고 모든 행 추출
+# 1행만 추출
+Orange[1,]          
+# 1행부터 5행까지 추출
+Orange[1:5, ]
+# 6행부터 10행까지 추출
+Orange[6,10, ]
+# 1행과 5행 추출
+Orange[c(1,5), ]    
+# 1~29행 제외하고 모든 행 추출
+Orange[-c(1:29), ]  
 
 ## 데이터를 비교하여 행 제한
-Orange[Orange$age == 118, ] # age컬럼의 데이터가 118인 행만 추출
+# age컬럼의 데이터가 118인 행만 추출
+Orange[Orange$age == 118, ] 
 Orange[Orange$age %in% c(118,484), ]
 # age 컬럼의 데이터가 118 또는 484인 행만 추출
 
@@ -66,10 +76,14 @@ Orange[ , "circumference"]
 # Orange의 Tree와 circumference 열만 추출. 행은 1행만 추출
 Orange[1, c("Tree", "circumference")]
 
-Orange[ , 1]      # Orange 데이터프레임의 첫번째 열만 추출
-Orange[ , c(1,3)] # Orange 데이터프레임의 1열과 3열만 추출
-Orange[ , c(1:3)] # Orange 데이터프레임의 첫번째 열부터 3번째 열만 추출
-Orange[ , -c(1:3)] # Orange 데이터프레임의 1열과 3열만 제외하고 추출
+# Orange 데이터프레임의 첫번째 열만 추출
+Orange[ , 1]      
+# Orange 데이터프레임의 1열과 3열만 추출
+Orange[ , c(1,3)] 
+# Orange 데이터프레임의 첫번째 열부터 3번째 열만 추출
+Orange[ , c(1:3)] 
+# Orange 데이터프레임의 1열과 3열만 제외하고 추출
+Orange[ , -c(1:3)]
 
 ## 행과 열제한
 
