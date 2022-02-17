@@ -1,11 +1,17 @@
 ### 데이터의 대략적인 특징 파악
 
 # 첫번째 행부터 6번째 행까지 추출
+# 값이 들어있는 데이터의 앞부분을 확인하고 싶을 때 사용.
+# 디폴트로 처음 6개의 관측값을 출력
 head(Orange) 
+
+# 더 많은 값을 출력하고 싶다면 head(Orange, n=10) 같이 선언한다.
+
 # 첫번째 행부터 3번째 행까지 추출
 head(Orange,3) 
 
 # 마지막 행부터 6개의 행까지 추출
+# 마지막 값을 관찰할 때는 head가 아닌 tail을 쓴다.
 tail(Orange) 
 # 마지막 행부터 3개의 행까지 추출
 tail(Orange,10)
@@ -116,12 +122,15 @@ stu4 <- data.frame(no=c(4,5,6), midterm = c(99,88,77))
 ## 데이터 병합
 stu1
 stu2
+# 프레임 결합
 merge(stu1, stu2)
 stu3
+# 프레임 결합
 merge(stu1,stu3)
 merge(stu1,stu3, all = TRUE)
 stu4
 stu1
+# 프레임 
 rbind(stu1,stu4)
 stu2
 cbind(stu1,stu2)
