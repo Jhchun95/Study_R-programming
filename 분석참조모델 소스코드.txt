@@ -1,0 +1,146 @@
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/00. Load R Sources.R', encoding = "UTF-8")
+Package: tm ---------- is loaded.
+Package: KoNLP ------- is loaded.
+Package: SnowballC --- is loaded.
+Package: xlsx -------- is loaded.
+Package: wordcloud --- is loaded.
+Package: foreach ----- is loaded.
+Package: doParallel -- is loaded.
+Package: corrplot ---- is loaded.
+Package: extrafont --- is loaded.
+Package: ggplot2 ----- is loaded.
+Package: sna --------- is loaded.
+Package: igraph ------ is loaded.
+Package: lubridate --- is loaded.
+Package: cluster ----- is loaded.
+Package: data.table -- is loaded.
+Package: dplyr ------- is loaded.
+Package: lda --------- is loaded.
+Package: topicmodels - is loaded.
+Package: Rmpfr ------- is loaded.
+Package: slam -------- is loaded.
+Package: sqldf ------- is loaded.
+Package: tcltk ------- is loaded.
+Package: stringi ----- is loaded.
+Package: stringr ----- is loaded.
+Package: arules ------ is loaded.
+Package: arulesViz --- is loaded.
+
+Backup was just finished!
+87007 words were added to dic_user.txt.
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/01-1. Load Data.R', encoding = "UTF-8")
+Warning messages:
+1: In FUN(X[[i]], ...) :
+  Bumped column 15 to type character on data row 48, field contains '2016-01-19 18:00'. Coercing previously read values in this column from logical, integer or numeric back to character which may not be lossless; e.g., if '00' and '000' occurred before they will now be just '0', and there may be inconsistencies with treatment of ',,' and ',NA,' too (if they occurred in this column before the bump). If this matters please rerun and set 'colClasses' to 'character' for this column. Please note that column type detection uses the first 5 rows, the middle 5 rows and the last 5 rows, so hopefully this message should be very rare. If reporting to datatable-help, please rerun and include the output from verbose=TRUE.
+2: In FUN(X[[i]], ...) :
+  Read less rows (8170) than were allocated (8823). Run again with verbose=TRUE and please report.
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/01-2. Mapping.R', encoding = "UTF-8")
+Error in if (DT$매핑법정동[i] == "") DT$매핑법정동[i] <- DT$법정동.주소[i] : 
+  missing value where TRUE/FALSE needed
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/01-2. Mapping.R', encoding = "UTF-8")
+Error in gsub(pattern[i], replacement[i], re_DT$처리부서, fixed = TRUE) : 
+  zero-length pattern
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/01-2. Mapping.R', encoding = "UTF-8")
+Error in gsub(pattern[i], replacement[i], re_DT$처리부서, fixed = TRUE) : 
+  zero-length pattern
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/01-2. Mapping.R', encoding = "UTF-8")
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/02. Preprocessing(Online_Mobile).R', encoding = "UTF-8")
+Backup was just finished!
+87007 words were added to dic_user.txt.
+177 words were added to dic_user.txt.
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/03. EDA(Online_Mobile).R', encoding = "UTF-8")
+dtm_ym_DT_장유면_2016_06 dtm에 유효한 값이 없습니다. 
+Error in data.frame(word = names(v), freq = v, term = paste(strsplit(aa_list[i],  : 
+  arguments imply differing number of rows: 0, 1
+In addition: There were 50 or more warnings (use warnings() to see the first 50)
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/04. SNA_dtm.R', encoding = "UTF-8")
+> # 1) EDA
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/05-1-1. keyword_DT.R', encoding = "UTF-8")
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/05-1-2. keyword_DTM.R', encoding = "UTF-8")
+> re_DT_도로 <- keyword_DT(keyword = '도로')
+> dtm_도로 <- keyword_DTM(data = re_DT_도로, keyword = '도로')
+There were 50 or more warnings (use warnings() to see the first 50)
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-1. EDA_time.R', encoding = "UTF-8")
+> EDA_time(data = re_DT)
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-2. assign_time.R', encoding = "UTF-8")
+> assign_time(data = re_DT, alpha = 2)
+> # 3) 순수 민원 처리 분석
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-3. real_time.R', encoding = "UTF-8")
+> real_time(data = re_DT)
+> # 4) 연장 처리 분석
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-4. delay_time.R', encoding = "UTF-8")
+> delay_time(data = re_DT)
+연장처리기한을 넘긴 민원이 없습니다.
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/05-1-1. keyword_DT.R', encoding = "UTF-8")
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/05-1-2. keyword_DTM.R', encoding = "UTF-8")
+> re_DT_도로 <- keyword_DT(keyword = '도로')
+> dtm_도로 <- keyword_DTM(data = re_DT_도로, keyword = '도로')
+There were 50 or more warnings (use warnings() to see the first 50)
+> tableau(data = c('re_DT_도로', 're_DT_주차', 're_DT_아파트'))
+Error: could not find function "tableau"
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/09. tableau.R', encoding = "UTF-8")
+> tableau(data = c('re_DT_도로', 're_DT_주차', 're_DT_아파트'))
+ Show Traceback
+ 
+ Rerun with Debug
+ Error in get(data[i]) : object 're_DT_주차' not found > source('C:/01.Project/01.분석참조모델/Rscript/새올/09. tableau.R', encoding = "UTF-8")
+> tableau(data = c('re_DT_도로', 're_DT_주차', 're_DT_아파트'))
+ Show Traceback
+ 
+ Rerun with Debug
+ Error in get(data[i]) : object 're_DT_주차' not found > source('C:/01.Project/01.분석참조모델/Rscript/새올/06-1. EDA_time.R', encoding = "UTF-8")
+> EDA_time(data = re_DT)
+> # 2) 담당자 지정시간 분석
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-2. assign_time.R', encoding = "UTF-8")
+> assign_time(data = re_DT, alpha = 2)
+> # 3) 순수 민원 처리 분석
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-3. real_time.R', encoding = "UTF-8")
+> real_time(data = re_DT)
+> # 4) 연장 처리 분석
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/06-4. delay_time.R', encoding = "UTF-8")
+> delay_time(data = re_DT)
+연장처리기한을 넘긴 민원이 없습니다.
+> #####################################################################################################
+> ## 09. Tableau 데이터 저장
+> #####################################################################################################
+> source('C:/01.Project/01.분석참조모델/Rscript/새올/09. tableau.R', encoding = "UTF-8")
+> tableau(data = c('re_DT_도로', 're_DT_주차', 're_DT_아파트'))
+ Show Traceback
+ 
+ Rerun with Debug
+ Error in get(data[i]) : object 're_DT_주차' not found > # 4) 현안 키워드 변경
+> # 주차
+> re_DT_주차 <- keyword_DT(keyword = '주차')
+> dtm_주차 <- keyword_DTM(data = re_DT_주차, keyword = '주차')
+There were 50 or more warnings (use warnings() to see the first 50)
+> find_topic_N(dtm = dtm_주차)
+Error: could not find function "find_topic_N"
+> k <- 2
+> keyword_topic(data = re_DT_주차, dtm = dtm_주차, k = k, keyword = '주차')
+Error: could not find function "keyword_topic"
+> 
+> # 아파트
+> re_DT_아파트 <- keyword_DT(keyword = '아파트')
+> dtm_아파트 <- keyword_DTM(data = re_DT_아파트, keyword = '아파트')
+There were 50 or more warnings (use warnings() to see the first 50)
+> find_topic_N(dtm = dtm_아파트)
+Error: could not find function "find_topic_N"
+> k <- 2
+> keyword_topic(data = re_DT_아파트, dtm = dtm_아파트, k = k, keyword = '아파트')
+Error: could not find function "keyword_topic"
