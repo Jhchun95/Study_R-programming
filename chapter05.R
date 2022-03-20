@@ -114,6 +114,7 @@ aggregate(circumference~Tree, Orange, mean)
 ### 데이터 구조 변경
 
 ## 데이터 준비
+# c() 함수를 이용하여 여러 타입의 벡터를 만들 수 있다.
 stu1 <- data.frame(no=c(1,2,3), midterm = c(100,90,80))
 stu2 <- data.frame(no=c(1,2,3), finalterm = c(100,90,80))
 stu3 <- data.frame(no=c(1,4,5), quiz = c(99,88,77))
