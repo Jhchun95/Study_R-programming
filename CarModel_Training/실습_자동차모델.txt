@@ -1,0 +1,21 @@
+# 4 
+
+# [실습5] 다중선형회귀|설명변수 선택
+model <- lm(mpg~. , data = mtcars)
+
+# mpg ~. 는 종속변수가 mpg이며 그외 모든 변수가 설명변수임을 의미하는 포뮬러(formula)
+new_model <- step(model, direction = "both")
+
+# 위처럼 현재 모델의 AIC를 구하고, 각 변수를 추가 또는 삭제했을 때 AIC를 구한 후,
+# AIC가 가장 작아질 수 있는 변수를 추가하거나 제거하는 과정을 반복하여
+# 최적의 설명변수를 추출한다.
+# Step:  AIC=61.31  mpg ~ wt + qsec + am 에 대한 출력값 설명
+### mtcars 데이터프레임의 변수 설명
+# mpg : 자동차 연비
+# wt : 자동차 중량
+# qsec : 1/4 mile time
+# am : 변속기(0=자동, 1=수동)
+
+# [실습6] 선형회귀|모델 진단 그래프
+model <- lm(mpg ~ wt + qsec + am, data = mtcars)
+plot(model)
