@@ -1,0 +1,38 @@
+# java에서 했던 것처럼 정수형 + 정수형이다.
+> x<-5
+> y<-3.14
+> x+y
+[1] 8.14
+
+# Python, Java의 boolean같이 수치, 값을 비교하면 True, False로 구분한다.
+> x>y
+[1] TRUE
+
+> x<y
+[1] FALSE
+
+> x=y
+> x==y
+[1] TRUE
+
+> x=y
+> x=y
+> x==y
+[1] TRUE
+
+> x<-x-3
+> x>y
+[1] FALSE
+
+# 경로따라 에러가 발생할 수 있고, R code 성능에 따라 실행속도가 다를 수 있다. 최대한 성능이 높은 컴퓨터가 부담감을 덜어주고, 코드를 돌리는 것이 가장 이상적이다.
+# 주소 경로는 본인이 설치한 R 파일위치에 설정한다.(업로드된 파일은 경로 설정 임의로 수정됨)
+> save.image("C:\\R 저장파일\\1")
+> save.image("C:\\R 저장파일\\data")
+> source("C:\\Users\\jjh10\\Desktop\\R 저장파일\\data.R")
+Error in file(filename, "r", encoding = encoding) : 
+  커넥션을 열 수 없습니다
+추가정보: 경고메시지(들): 
+In file(filename, "r", encoding = encoding) :
+  파일 'C:\Users\jjh10\Desktop\R 저장파일\data.R'를 열 수 없습니다: No such file or directory
+> save.image("C:\\Users\\jjh10\\Desktop\\R 저장파일\\123")
+> 
